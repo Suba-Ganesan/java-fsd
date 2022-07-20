@@ -1,11 +1,11 @@
 package Constructor;
 
 class EmpInfo{
-	int id;
+	int age;
 	String name;
 
 void display() {
-	System.out.println(id+" "+name);
+	System.out.println(name+"'s age is "+age);
 	}
 }
 

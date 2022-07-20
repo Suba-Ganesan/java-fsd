@@ -1,17 +1,17 @@
 package Constructor;
 
-class Std{
-	int id;
+class Student{
+	int age;
 	String name;
 
-	Std(int i,String n)
+	Student(String x,int y)
 	{
-	id=i;
-	name=n;
+	name=x;
+	age=y;
 	}
 
 	void display() {
-	System.out.println(id+" "+name);
+	System.out.println(name+"'s age is "+age);
 	}
 }
 
@@ -19,9 +19,9 @@ public class ParameterizedConstructor {
 
 public static void main(String[] args) {
 
-	Std std1=new Std(2,"Alex");
-	Std std2=new Std(10,"Annie");
-	std1.display();
-	std2.display();
+	Student s=new Student("nilan",19);
+	Student s2=new Student("suba",21);
+	s.display();
+	s2.display();
 		}
 }

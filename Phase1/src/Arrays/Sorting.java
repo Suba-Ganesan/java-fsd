@@ -2,7 +2,7 @@ package Arrays;
 
 public class Sorting {
 	// creating a method which receives an array as a parameter
-	static void min(int arr[]) {
+	static void sort(int arr[]) {
 		int temp, j, i;
 		for (i = 0; i < arr.length; i++) {
 			for (j = i + 1; j < arr.length; j++) {
@@ -22,6 +22,6 @@ public class Sorting {
 
 	public static void main(String args[]) {
 		int a[] = { 33, 3, 4, 5 };// declaring and initializing an array
-		min(a);
+		sort(a);//passing array to method
 	}
 }

@@ -1,6 +1,7 @@
 package Practice_Project2;
-import java.util.ArrayList;
-import java. util. Scanner;
+//import java.util.ArrayList;
+//import java. util. Scanner;
+import java.util.*;
 public class SearchEmail {
 
    public static void main(String[] args){

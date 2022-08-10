@@ -21,7 +21,7 @@ class ReadFile {
 				f1.createNewFile();
 			FileReader fl = new FileReader(f1);
 			BufferedReader bf = new BufferedReader(fl);
-			// For reading the content
+			//to read content
 			while ((str = bf.readLine()) != null) {
 				System.out.println(str);
 			}
@@ -42,10 +42,10 @@ public class FileHandling {
 		Scanner scan = new Scanner(System.in);
 		String s = scan.nextLine();
 		if (s.equalsIgnoreCase("R")) {
-			ReadFile read = new ReadFile();
+			ReadFile read = new ReadFile(); //class obj
 
 		} else if (s.equalsIgnoreCase("W") || s.equalsIgnoreCase("A")) {
-			WriteOrAppendToFile(s);
+			WriteOrAppendToFile(s);//fn call
 		} else {
 			System.out.println("INVALID mode");
 		}

@@ -1,5 +1,10 @@
-use mydb;
+use mynewdb;
 
-create table account(accno int,lastname varchar(25),firstname varchar(25),balance int);
-select * from account;
-INSERT INTO account VALUES(1,'suba','ganesan',2000);
+create table `student`(
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(255) not null,
+  `lastname` varchar(255) not null,
+  `email` varchar(255) not null,
+  PRIMARY KEY (`id`)
+);
+insert into student (firstname, lastname, email) values ('John', 'Doe', 'jdoe@gmail.com');

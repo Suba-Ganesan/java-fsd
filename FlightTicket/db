@@ -1,0 +1,12 @@
+use flyaway;
+
+CREATE TABLE flights (name varchar(25),fromf varchar(25),tof varchar(25),datef varchar(25),timef varchar(25),price varchar(25));
+insert into flights values('Air India','Trichy','delhi','2022-08-15', 5,17000);
+insert into Flights values('Air Asia','Madurai','bangalore','2022-08-15', 10,11000);
+insert into Flights values('Cargo','Madurai','Mumbai','2022-08-15' ,50,14000);
+
+CREATE TABLE admin (email varchar(25),password varchar(25));
+INSERT INTO admin(email,password) VALUES('admin@gmail.com','a123');
+
+select * from flights;
+select * from admin;

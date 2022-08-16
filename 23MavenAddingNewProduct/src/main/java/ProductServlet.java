@@ -28,8 +28,9 @@ public class ProductServlet extends HttpServlet {
 		pd.setPrice(Price);
 		pd.setName(Name);
 
-		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-		Session session = sessionFactory.openSession();
+		//SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		//Session session = sessionFactory.openSession();
+		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
 		int i = (Integer) session.save(pd);
 		session.getTransaction().commit();

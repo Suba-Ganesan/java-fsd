@@ -15,9 +15,6 @@ import com.samples.domain.Product;
 public class ProductServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public ProductServlet() {
-		super();
-	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -31,7 +28,6 @@ public class ProductServlet extends HttpServlet {
 		pro.setPrice(price);
 		pro.setProductName(name);
 		HttpSession session = request.getSession();
-
 		session.setAttribute("Product", pro);
 		response.sendRedirect("view.jsp");
 

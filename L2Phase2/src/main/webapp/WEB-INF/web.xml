@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>L2Phase2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  <!-- Assisted Practice: 2.3 Stored Procedures with Exceptions -->
+  <servlet>
+    <servlet-name>ProductDetail</servlet-name>
+    <servlet-class>com.servlets.ProductDetail</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductDetail</servlet-name>
+    <url-pattern>/list</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Assisted Practice: 2.4 Create, Select, and Drop a Database -->
+    <servlet>
+    <servlet-name>DBOperations</servlet-name>
+    <servlet-class>com.servlets.DBOperations</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DBOperations</servlet-name>
+    <url-pattern>/dboperations</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Assisted Practice: 2.5 Insertion, Updation, and Deletion of Database Records -->
+  <servlet>
+    <servlet-name>ProductDetails</servlet-name>
+    <servlet-class>com.servlets.ProductDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductDetails</servlet-name>
+    <url-pattern>/IUD</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>

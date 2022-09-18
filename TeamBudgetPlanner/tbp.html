@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Budget Planner</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap-5.2.1-dist/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div>
+      <h1 class="text-center bg-warning mt-3">Team Budget Planner</h1>
+    </div>
+
+    <form>
+      <div class="container bg-light text-dark col-md-10 mt-3">
+        <div class="row">
+          <div class="col-md-8">
+            <label>Team Name*</label>
+            <input
+              type="text"
+              id="teamname"
+              class="form-control"
+              placeholder="Enter your team name"
+              required
+            />
+          </div>
+          <div class="col-md-8">
+            <label>Team Manager*</label>
+            <input
+              type="text"
+              id="managername"
+              class="form-control"
+              placeholder="Enter team manager Name"
+              required
+            />
+          </div>
+          <div class="col-md-5">
+            <label>Team Members*</label>
+            <input
+              type="number"
+              id="members"
+              class="form-control"
+              placeholder="Total members in the team"
+              required
+            />
+          </div>
+          <div class="col-md-5">
+            <label>Days*</label>
+            <input
+              type="number"
+              id="days"
+              class="form-control"
+              placeholder="Total no of Days"
+              required
+            />
+          </div>
+          <div class="col-md-5">
+            <label>Travel expenses*</label>
+            <input
+              required
+              type="number"
+              id="travel"
+              class="form-control"
+              placeholder=" Enter total travel cost"
+            />
+          </div>
+          <div class="col-md-5">
+            <label>Lodging*</label>
+            <input
+              type="number"
+              id="rent"
+              class="form-control"
+              placeholder="Enter lodging cost"
+              required
+            />
+          </div>
+          <div class="col-md-5">
+            <label>Meals*</label>
+            <input
+              type="number"
+              id="food"
+              class="form-control"
+              placeholder="Enter total meal cost"
+              required
+            />
+          </div>
+          <div class="col-md-5">
+            <label>Snacks</label>
+            <input
+              type="number"
+              id="snack"
+              class="form-control"
+              placeholder="optional"
+            />
+          </div>
+          <div class="col-md-5">
+            <label>Tolls</label>
+            <input
+              type="number"
+              class="form-control"
+              id="tolls"
+              placeholder="optional"
+            />
+          </div>
+          <div class="col-md-5">
+            <label>Medical Test fee</label>
+            <input
+              type="number"
+              class="form-control"
+              id="meditest"
+              placeholder="optional"
+            />
+          </div>
+          <div class="col-md-5">
+            <label>Other expenses</label>
+            <input
+              type="number"
+              class="form-control"
+              id="other"
+              placeholder="optional"
+            />
+          </div>
+          <div class="text-center mt-3">
+            <input
+              class="btn btn-danger"
+              type="button"
+              onclick="addtoshow()"
+              value="Submit"
+            />
+            <br />
+            <span id="teamDetails"> </span>
+            <div
+              id="spanResult"
+              class="container bg-success text-white col-md-8 mb-5"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!-- java script-->
+
+    <script>
+      function addtoshow() {
+        var teamName = document.getElementById("teamname").value;
+        var teamManager = document.getElementById("managername").value;
+        var teamMembers = document.getElementById("members").value;
+        var days = document.getElementById("days").value;
+        var travel = document.getElementById("travel").value;
+        var lodge = document.getElementById("rent").value;
+        var lunch = document.getElementById("food").value;
+        var snacks = document.getElementById("snack").value;
+        var tolls = document.getElementById("tolls").value;
+        var meditest = document.getElementById("meditest").value;
+        var otherexpenses = document.getElementById("other").value;
+
+        var totalExpense =
+          parseInt(travel) +
+          parseInt(lodge) +
+          parseInt(lunch) +
+          parseInt(snacks) +
+          parseInt(tolls) +
+          parseInt(meditest) +
+          parseInt(otherexpenses);
+
+        document.getElementById("spanResult").textContent =
+          "Total Expenses for team:" + teamName + " is Rs." + totalExpense;
+        document.getElementById("teamDetails").textContent =
+          "Team Name: " +
+          teamName +
+          " | " +
+          "Team Manager: " +
+          teamManager +
+          " | " +
+          "Total Members: " +
+          teamMembers +
+          " | " +
+          "Total no of Days: " +
+          days;
+      }
+    </script>
+  </body>
+</html>
